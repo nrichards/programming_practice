@@ -24,6 +24,9 @@ struct ContentView: View {
             Button(action: PalindromePermutation.palindromePermutation) {
                 Text("Palindrome Permutation")
             }
+            Button(action: AnimalShelter.demo) {
+                Text("Animal Shelter")
+            }
             Spacer()
 
         }
