@@ -11,26 +11,20 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .asHeader()
             Text("Hello, world!")
             Spacer()
-            Button(action: InsertSymbols.insertSymbols) {
-                Text("Insert Symbols")
-            }
-            Button(action: CheckPermutation.checkPermutation) {
-                Text("Check Permutation")
-            }
-            Button(action: PalindromePermutation.palindromePermutation) {
-                Text("Palindrome Permutation")
-            }
-            Button(action: AnimalShelter.demo) {
-                Text("Animal Shelter")
-            }
+            Problems()
             Spacer()
-
         }
         .padding()
+    }
+}
+
+extension Image {
+    func asHeader() -> some View {
+        imageScale(.large)
+            .foregroundColor(.accentColor)
     }
 }
 

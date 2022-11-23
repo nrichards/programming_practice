@@ -13,6 +13,8 @@
 		01CE107C292C910A006838D0 /* AnimalShelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE107B292C910A006838D0 /* AnimalShelter.swift */; };
 		01CE107D292C910A006838D0 /* AnimalShelter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE107B292C910A006838D0 /* AnimalShelter.swift */; };
 		01CE107F292C9E8C006838D0 /* AnimalShelterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE107E292C9E8C006838D0 /* AnimalShelterTests.swift */; };
+		01CE1081292EAF41006838D0 /* Problem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE1080292EAF41006838D0 /* Problem.swift */; };
+		01CE1083292EAFC8006838D0 /* ProblemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE1082292EAFC8006838D0 /* ProblemsView.swift */; };
 		01DFF0A6292C606600CB283A /* ProblemsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFF0A5292C606600CB283A /* ProblemsApp.swift */; };
 		01DFF0A8292C606600CB283A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DFF0A7292C606600CB283A /* ContentView.swift */; };
 		01DFF0AA292C606700CB283A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DFF0A9292C606700CB283A /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		01CE1076292C90E2006838D0 /* PalindromePermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromePermutation.swift; sourceTree = "<group>"; };
 		01CE107B292C910A006838D0 /* AnimalShelter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalShelter.swift; sourceTree = "<group>"; };
 		01CE107E292C9E8C006838D0 /* AnimalShelterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalShelterTests.swift; sourceTree = "<group>"; };
+		01CE1080292EAF41006838D0 /* Problem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Problem.swift; path = Problems/Problem.swift; sourceTree = SOURCE_ROOT; };
+		01CE1082292EAFC8006838D0 /* ProblemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsView.swift; sourceTree = "<group>"; };
 		01DFF0A2292C606600CB283A /* Problems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Problems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DFF0A5292C606600CB283A /* ProblemsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsApp.swift; sourceTree = "<group>"; };
 		01DFF0A7292C606600CB283A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,7 +87,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01CE107A292C90F3006838D0 /* IndividualProblems */ = {
+		01CE107A292C90F3006838D0 /* ProblemDefinitions */ = {
 			isa = PBXGroup;
 			children = (
 				01CE1074292C90E2006838D0 /* CheckPermutation1.2.swift */,
@@ -91,7 +95,7 @@
 				01CE1076292C90E2006838D0 /* PalindromePermutation.swift */,
 				01CE107B292C910A006838D0 /* AnimalShelter.swift */,
 			);
-			path = IndividualProblems;
+			path = ProblemDefinitions;
 			sourceTree = "<group>";
 		};
 		01DFF099292C606600CB283A = {
@@ -117,9 +121,11 @@
 		01DFF0A4292C606600CB283A /* Problems */ = {
 			isa = PBXGroup;
 			children = (
-				01CE107A292C90F3006838D0 /* IndividualProblems */,
+				01CE107A292C90F3006838D0 /* ProblemDefinitions */,
 				01DFF0A5292C606600CB283A /* ProblemsApp.swift */,
 				01DFF0A7292C606600CB283A /* ContentView.swift */,
+				01CE1080292EAF41006838D0 /* Problem.swift */,
+				01CE1082292EAFC8006838D0 /* ProblemsView.swift */,
 				01DFF0A9292C606700CB283A /* Assets.xcassets */,
 				01DFF0AB292C606700CB283A /* Preview Content */,
 				01286E8B292C760200FE0329 /* TestPlan.xctestplan */,
@@ -287,7 +293,9 @@
 				01CE1077292C90E2006838D0 /* CheckPermutation1.2.swift in Sources */,
 				01DFF0A8292C606600CB283A /* ContentView.swift in Sources */,
 				01CE1079292C90E2006838D0 /* PalindromePermutation.swift in Sources */,
+				01CE1083292EAFC8006838D0 /* ProblemsView.swift in Sources */,
 				01DFF0A6292C606600CB283A /* ProblemsApp.swift in Sources */,
+				01CE1081292EAF41006838D0 /* Problem.swift in Sources */,
 				01CE107C292C910A006838D0 /* AnimalShelter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
