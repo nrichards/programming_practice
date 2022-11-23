@@ -14,7 +14,7 @@ struct ContentView: View {
                 .asHeader()
             Text("Hello, world!")
             Spacer()
-            Problems()
+            ProblemsView(problems: Problems.problems)
             Spacer()
         }
         .padding()

@@ -17,7 +17,8 @@ struct ProblemButton: View {
     }
 }
 
-struct Problems: View {
+struct ProblemsView: View {
+    var problems: [Problem]
     var body: some View {
         ForEach(problems) { problem in
             ProblemButton(
