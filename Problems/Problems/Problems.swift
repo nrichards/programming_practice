@@ -23,5 +23,8 @@ struct Problems {
                 name: "Palindrome Permutation"),
         Problem(action: AnimalShelter.demo,
                 name: "Animal Shelter"),
+        Problem(action: SpiralMatrix.spiralMatrix,
+                name: "Spiral Matrix"),
+
     ]
 }
