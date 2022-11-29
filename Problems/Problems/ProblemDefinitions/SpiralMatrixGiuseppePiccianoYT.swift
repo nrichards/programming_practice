@@ -13,7 +13,7 @@ import Foundation
 ///  - I also did some initial inner work, but only to enumerate the output by observation, in hopes that I would be inspired to program top-down
 ///  - I'm burned out, after writing all the outer work
 ///  - Overwhelmed
-/// Conclusions
+/// Intermediate conclusions
 ///  - May want to be honest with self about my initial hope for being inspired. Make note of it not working. Then explicitly change strategy.
 ///  - May want to try solving the inner most iteration first, to see if that inspire me .. bottom-up
 ///  - Try solving for a smaller size
@@ -21,6 +21,23 @@ import Foundation
 ///  - Identify invariants gleaned from analysis, e.g. "Iteration will always output the current element, and then do a check, and maybe turn right-ward"
 ///  - Repeat that, building upon conclusions, e.g. "The bounding box of visited rows and columns may shrink."
 ///  - Use a parameter-object to simplify the cognitive burden of passing state around
+///  Review
+///  - Watched the YouTube video. I like the YT version better .. the solution is better for its purpose.
+///  - Mine is redundant and harder to read. The YT solution is dense and comprehendible.
+///  - The YT solution uses a while loop with nested for loops. Mine uses a single for loop.
+///    - I had a lack of focus when thinking about the iteration. I only settled on the solution algorithm, writing in pseudocode, after much studying. During that
+///      middle time I bloated my solution.
+///  - The YT solution uses local native types. Mine uses a parameter object.
+///    - This extra fancy object could be helpful as it abstracts the state. It's not what was asked for by the questioner however.
+///  - The YT solution uses highly local logic for the "walking" portion of the spiral matrix iteration. I distribute the logic to discrete functions, each performing
+///    a behavior adhering to the question's goals.
+///    - This distribution makes it harder to ensure all the logic works well together. While the YT logic could also easily contain a small error, it would be
+///      easier than in mine to spot a bug given the YT solution fits easily visibly within a single screen.
+///  Final conclusions
+///  - I can reduce the labor, increase the productivity, and make room for additional interview topics, by focusing tightly on providing the minimal solution.
+///  - To focus on the solution, do speak or write out the minimal solution, and follow that during implementation.
+///  - To improve the value of my personal process & approach, be conscious of the relative value of each subtask I'm performing. E.g. when building a parameter
+///    object, contemplate the value - the pros and cons - and the value of the alternatives.
 
 struct SpiralMatrix {
     /// Given a two dimensional array, return the inward-iteration, walking the deepest dimension
@@ -39,7 +56,7 @@ struct SpiralMatrix {
                                [6, 2, 3, 9, 7]]
 
         let result = doTest(mnArray: sample)
-         print("input \(sample) ==> output \(result)")
+        print("input \(sample) ==> output \(result)")
     }
 
     enum Direction {
@@ -77,7 +94,7 @@ struct SpiralMatrix {
         mutating func turnRight() {
             let oldDirection = direction
             direction = direction.turn()
-            
+
             switch oldDirection {
             case .east:
                 rowStart += 1
@@ -89,7 +106,7 @@ struct SpiralMatrix {
                 columnStart += 1
             }
         }
-        
+
         /// Mutates the current position, according
         mutating func paceForward() {
             switch direction {
@@ -103,7 +120,7 @@ struct SpiralMatrix {
                 row -= 1
             }
         }
-        
+
         func needTurn() -> Bool {
             switch direction {
             case .east:
@@ -116,18 +133,18 @@ struct SpiralMatrix {
                 return row <= rowStart
             }
         }
-        
+
         mutating func walk() {
             // Detect end of row / column
             let shouldTurn = needTurn()
-            
+
             // Do the turn
             if shouldTurn {
                 // Completed visitation of a row / column
 
                 turnRight()
             }
-            
+
             paceForward()
         }
     }
@@ -157,5 +174,4 @@ struct SpiralMatrix {
 
         return result
     }
-
 }
