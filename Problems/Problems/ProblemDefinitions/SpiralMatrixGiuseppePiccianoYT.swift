@@ -54,17 +54,17 @@ struct SpiralMatrix {
         let sample: [[Int]] = [[1, 0, 5, 4, 3],
                                [3, 2, 1, 0, 5],
                                [6, 2, 3, 9, 7]]
-
+        
         let result = doTest(mnArray: sample)
         print("input \(sample) ==> output \(result)")
     }
-
+    
     enum Direction {
         case east
         case south
         case west
         case north
-
+        
         // TODO: optimize with rawValue
         func turn() -> Direction {
             switch self {
@@ -79,7 +79,7 @@ struct SpiralMatrix {
             }
         }
     }
-
+    
     /// Represents a M x N matrix. Offers ability to walk the matrix following an inward-bound spiral visitation pattern.
     struct SpiralStep {
         var rowStart: Int
@@ -89,12 +89,12 @@ struct SpiralMatrix {
         var row: Int
         var column: Int
         var direction: Direction
-
+        
         /// Mutates the direction and bounding box, according to
         mutating func turnRight() {
             let oldDirection = direction
             direction = direction.turn()
-
+            
             switch oldDirection {
             case .east:
                 rowStart += 1
@@ -106,7 +106,7 @@ struct SpiralMatrix {
                 columnStart += 1
             }
         }
-
+        
         /// Mutates the current position, according
         mutating func paceForward() {
             switch direction {
@@ -120,7 +120,7 @@ struct SpiralMatrix {
                 row -= 1
             }
         }
-
+        
         func needTurn() -> Bool {
             switch direction {
             case .east:
@@ -133,45 +133,45 @@ struct SpiralMatrix {
                 return row <= rowStart
             }
         }
-
+        
         mutating func walk() {
             // Detect end of row / column
             let shouldTurn = needTurn()
-
+            
             // Do the turn
             if shouldTurn {
                 // Completed visitation of a row / column
-
+                
                 turnRight()
             }
-
+            
             paceForward()
         }
     }
-
+    
     static func doTest(mnArray: [[Int]]) -> [Int] {
         let rows = mnArray.count
         let columns = mnArray[0].count
         let count = rows * columns
-
+        
         var result = [Int](repeating: 0, count: count)
-
+        
         // Declare initial iteration state
-
+        
         var step = SpiralStep(
             rowStart: 0, rowEnd: rows - 1,
             columnStart: 0, columnEnd: columns - 1,
             row: 0,
             column: 0,
             direction: Direction.east)
-
+        
         for index in 0 ..< count {
             // output the current element, as first step
             result[index] = mnArray[step.row][step.column]
-
+            
             step.walk()
         }
-
+        
         return result
     }
 }
