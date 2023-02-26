@@ -13,14 +13,24 @@ class ContainerWithMostWater {
         // Nick swift concepts
         // min == min() and array.min()
         // max == same
-        // for loop iterating through array with no index == 
+        // for loop iterating through array with no index == "for X in <range>"
+        //   <range> == INT1...INT2 == inclusive
+        //   <range> == INT1..<INT2 == excluding last
+        //   <range> == ..<INT2 == to negative infinity
+        //   <range> == INT1... == to positive infinity
         // array length == "count", so array.count
+        // brackets are required == "for BLA {...}", "if BLA {...}"
+        // no implicit "return"
         var largest = 0
         let len = height.count
-        for i = 0, len - 2
-            for j = 1, len - 1
-                let current = min(height[0], height[1]) * abs(0 - 1)
-                if current > largest
+        for i in 0..<len - 1 {
+            for j in 1..<len {
+                let current = min(height[i], height[j]) * abs(i - j)
+                if current > largest {
                     largest = current
+                }
+            }
+        }
+        return largest
     }
 }
