@@ -25,6 +25,8 @@ struct Problems {
                 name: "Animal Shelter"),
         Problem(action: SpiralMatrix.spiralMatrix,
                 name: "Spiral Matrix"),
+        Problem(action: ContainerWithMostWater.containerWithMostWater,
+                name: "Container With Most Water"),
 
     ]
 }

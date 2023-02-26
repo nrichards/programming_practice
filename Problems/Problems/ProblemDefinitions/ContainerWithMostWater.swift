@@ -20,6 +20,15 @@
 /// - brackets are required == "for BLA {...}", "if BLA {...}"
 /// - no implicit "return"
 class ContainerWithMostWater {
+    /// Ridiculously large search space
+    static func containerWithMostWater() {
+        let height = [1,8,6,2,5,4,8,3,7]
+        
+        print("Running ...")
+        let result = ContainerWithMostWater().maxArea(height)
+        print("Result \(result) - should be 49")
+    }
+    
     // e.g
     //   height = [3, 4, 5]
     //   n = 3

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016E41C829AC011C00483EA6 /* ContainerWithMostWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E41C729AC011C00483EA6 /* ContainerWithMostWater.swift */; };
+		016E41CA29AC02E300483EA6 /* ContainerWithMostWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E41C929AC02E300483EA6 /* ContainerWithMostWaterTests.swift */; };
 		01CE1077292C90E2006838D0 /* CheckPermutation1.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE1074292C90E2006838D0 /* CheckPermutation1.2.swift */; };
 		01CE1078292C90E2006838D0 /* InsertSymbolsProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE1075292C90E2006838D0 /* InsertSymbolsProblem.swift */; };
 		01CE1079292C90E2006838D0 /* PalindromePermutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CE1076292C90E2006838D0 /* PalindromePermutation.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		01286E8B292C760200FE0329 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		016E41C729AC011C00483EA6 /* ContainerWithMostWater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerWithMostWater.swift; sourceTree = "<group>"; };
+		016E41C929AC02E300483EA6 /* ContainerWithMostWaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerWithMostWaterTests.swift; sourceTree = "<group>"; };
 		01CE1074292C90E2006838D0 /* CheckPermutation1.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermutation1.2.swift; sourceTree = "<group>"; };
 		01CE1075292C90E2006838D0 /* InsertSymbolsProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertSymbolsProblem.swift; sourceTree = "<group>"; };
 		01CE1076292C90E2006838D0 /* PalindromePermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromePermutation.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		01CE107A292C90F3006838D0 /* ProblemDefinitions */ = {
 			isa = PBXGroup;
 			children = (
+				016E41C729AC011C00483EA6 /* ContainerWithMostWater.swift */,
 				01CE1074292C90E2006838D0 /* CheckPermutation1.2.swift */,
 				01CE1075292C90E2006838D0 /* InsertSymbolsProblem.swift */,
 				01CE1076292C90E2006838D0 /* PalindromePermutation.swift */,
@@ -149,6 +154,7 @@
 			children = (
 				01DFF0B6292C606700CB283A /* ProblemsTests.swift */,
 				01CE107E292C9E8C006838D0 /* AnimalShelterTests.swift */,
+				016E41C929AC02E300483EA6 /* ContainerWithMostWaterTests.swift */,
 			);
 			path = ProblemsTests;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 			files = (
 				01CE1078292C90E2006838D0 /* InsertSymbolsProblem.swift in Sources */,
 				01CE108529357CAF006838D0 /* SpiralMatrixGiuseppePiccianoYT.swift in Sources */,
+				016E41C829AC011C00483EA6 /* ContainerWithMostWater.swift in Sources */,
 				01CE1077292C90E2006838D0 /* CheckPermutation1.2.swift in Sources */,
 				01DFF0A8292C606600CB283A /* ContentView.swift in Sources */,
 				01CE1079292C90E2006838D0 /* PalindromePermutation.swift in Sources */,
@@ -308,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016E41CA29AC02E300483EA6 /* ContainerWithMostWaterTests.swift in Sources */,
 				01CE107F292C9E8C006838D0 /* AnimalShelterTests.swift in Sources */,
 				01DFF0B7292C606700CB283A /* ProblemsTests.swift in Sources */,
 				01CE107D292C910A006838D0 /* AnimalShelter.swift in Sources */,
